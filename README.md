@@ -1,0 +1,1 @@
+# assotiation_template
