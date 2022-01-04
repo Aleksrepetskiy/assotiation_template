@@ -1,4 +1,5 @@
 .footer {
+	flex-shrink: 0;
 	h4 {
 		margin-bottom: 20px;
         color: $dark_blue;
@@ -8,21 +9,64 @@
 		padding: 52px 0 20px 0;
 		border-top: 1px solid #dcdbf0;
 		border-bottom: 1px solid #dcdbf0;
+		@include phone {
+			padding-top: 0;
+		}
 	}
-    .row {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 0 8%;
-        margin-bottom: 40px;
+	&__menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 0 8%;
+		margin-bottom: 40px;
 		@include tablet {
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 36px 4%;
 		}
 		@include phone {
 			grid-template-columns: 1fr;
-			grid-gap: 36px 4%;
+			grid-gap: 0;
+			.col4 {
+				border-bottom: 1px solid #DCDBF0;
+				cursor: pointer;
+				&.active {
+					.footer__list {
+						display: block;
+						padding-bottom: 12px;
+					}
+					.h4:after {
+						transform: rotate(-180deg);
+					}
+
+				}
+			}
+			.h4 {
+				padding-top: 22px;
+				padding-bottom: 12px;
+				margin-bottom: 0;
+				position: relative;
+				padding-right: 24px;
+				&:after {
+					content: '';
+					display: block;
+					width: 24px;
+					height: 24px;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -12px;
+					background-image: url('/img/icon/a-d.svg');
+					background-repeat: no-repeat;
+					background-position: center;
+					transition: all ease-in 0.1s;
+				}
+			}
 		}
-    }
+	}
+	&__list {
+		@include phone {
+			display: none;
+		}
+	}
     &__item {
         padding-bottom: 16px;
         &:last-child {
@@ -36,16 +80,17 @@
         display: flex;
         justify-content: space-between;
         padding: 3px 0;
-		white-space: nowrap;
 		overflow-x: auto;
+		white-space: nowrap;
 		scrollbar-width: none;
-		min-width: auto;
+		min-width: 100%;
 		&::-webkit-scrollbar {
 			-webkit-appearance: none;
 			height: 0;
 			width: 0;
 			display: none;
 		}
+		-webkit-overflow-scrolling: touch;
         .sprite-vodafone {
             fill: #fe4949;
         }
@@ -54,6 +99,7 @@
         }
 		&-divider {
 			margin: 0 24px;
+			color: #DCDBF0;
 		}
     }
     &__contact-item {
@@ -72,13 +118,29 @@
 		padding: 30px 0;
 		.wrapper {
 			display: grid;
+			grid-template-areas:
+				"adress copyrating fasebook";
 			grid-template-columns: 1fr 1fr 1fr;
+
+			@include phone {
+				grid-template-areas:
+				"adress fasebook"
+				"copyrating copyrating"
+				;
+				grid-template-columns: 1fr  auto;
+				row-gap: 40px;
+				column-gap: 10px;
+			}
 		}
     }
 	.adress {
 		max-width: 270px;
 		position: relative;
 		padding-left: 32px;
+		grid-area: adress;
+		@include phone{
+			font-size: 14px;
+		}
 		.sprite {
 			position: absolute;
 			left: 0px;
@@ -90,13 +152,25 @@
 		text-align: center;
 		padding: 0 16px;
 		color: #6e728e;
+		grid-area: copyrating;
+		@include phone{
+			padding: 0;
+			text-align: left;
+		}
+	}
+	.fasebook  {
+		grid-area: fasebook;
 	}
 
 	&__logo {
 		max-width: 90px;
 		margin: 0 auto;
 		margin-bottom: 12px;
+		@include phone{
+			display: none;
+		}
 	}
+
 }
 .fasebook {
 	justify-self: end;

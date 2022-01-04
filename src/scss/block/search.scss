@@ -1,0 +1,93 @@
+.search {
+	&__link {
+		font-size: 14px;
+        display: block;
+        display: flex;
+        align-items: center;
+		margin-right: 32px;
+        @include tablet {
+			margin-right: 16px;
+        }
+        @include phone {
+			margin: 0 0 0 auto;
+        }
+    }
+	&_field {
+		
+
+	}
+    &__placeholder {
+        @include tablet {
+            display: none;
+        }
+    }
+	&__form {
+		form {
+			width: 100%;
+			display: flex;
+		}
+	}
+    &__input-b {
+        position: relative;
+		flex-grow: 1;
+
+    }
+    &__input {
+        width: 100%;
+        border: 1px solid #DCDBF0;
+        height: 60px;
+        padding: 0 46px 0 24px;
+        font-size: 17px;
+        color: #525366;
+        line-height: 48px;
+        border-radius: 4px;
+		background-color: #FBFBFB;
+    }
+    &__btn {
+        display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		color: $dark_blue;
+        height: 60px;
+        right: 0;
+        top: 0;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+		margin-left: 8px;
+		background-color: $yellow;
+		border: none;
+		padding: 0 28px;
+		border-radius: 4px;
+		@include phone {
+			padding: 0;
+			width: 60px;
+			min-width: 60px;
+			.search__btn-text {
+				display: none;
+			}
+		}
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 46px;
+        height: 40px;
+        color: #96a4ef;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 5;
+    }
+}
+.sprite-search {
+    fill: $blue;
+    margin-right: 4px;
+    @include tablet {
+        margin-right: 0;
+    }
+}

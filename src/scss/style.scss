@@ -14,8 +14,8 @@ body {
 	color: $default_color;
 	min-width: 320px;
 	background-color: #FBFBFB;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+	display: flex;
+	flex-direction: column;
 }
 .wrapper {
 	max-width: 1412px;
@@ -60,6 +60,11 @@ h4, .h4 {
 .sprite {
 	display: block
 }
+.main {
+	flex: 1 0 auto;
+}
+@import "block/forms.scss";
 @import "block/header.scss";
+@import "block/search.scss";
 @import "block/footer.scss";
-@import "block/popup.scss"
+@import "block/popup.scss";

@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+	//footer
+	const footerMenuContainer = document.querySelector('.footer__menu');
+	footerMenuContainer.addEventListener('click', (e)=> {
+		if (e.target.classList == 'h4' ) {
+			e.target.closest('.col4').classList.toggle('active');
+		}
+	})
+
     //Поиск
     $('.search__link').on('click', function (e) {
         e.preventDefault();
