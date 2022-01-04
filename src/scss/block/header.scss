@@ -1,0 +1,403 @@
+.header {
+	.wrapper {
+		@include phone{
+			display: flex;
+			align-items: center;
+		}
+	}
+    &__logo {
+        flex-basis: 300px;
+        min-width: 300px;
+        margin-right: 10px;
+		img {
+			max-width: 100%;
+		}
+		@include phone {
+			flex-basis: 208px;
+			min-width: 208px;
+
+		}
+    }
+    &__main {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 12px 0;
+		@include phone {
+			padding: 6px 0;
+			flex-grow: 1;
+		}
+    }
+    &__contact {
+        display: block;
+        margin-left: auto;
+        margin-right: 32px;
+        @include tablet {
+            margin-right: 16px;
+        }
+        @include phone {
+            display: none;
+        }
+
+    }
+    &__menu {
+        background-color: $dark_blue;
+        border-radius: 4px;
+		@include phone {
+			background-color: transparent;
+			border-radius: 0;
+		}
+    }
+}
+
+.menu {
+    position: relative;
+	&__close {
+		display: block;
+		width: 36px;
+		.sprite {
+			fill: $blue;
+		}
+	}
+    &__list {
+		display: flex;
+        padding: 0 36px;
+        @include tablet {
+			padding: 0 16px;
+        }
+        @include phone {
+			position:  absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			flex-direction: column;
+			background-color: #fff;
+			z-index: 99;
+			padding: 0;
+			overflow: auto;
+
+        }
+    }
+    &__item {
+		position: relative;
+		@media (min-width: 768px) {
+			&:hover {
+				.menu__link {
+					color: #fff;
+					background-color: #626cc3;
+				}
+				.sub-menu__list {
+					display: block;
+				}
+			}
+		}
+		@include phone {
+			padding: 0 16px;
+			position: relative;
+			border-bottom: 1px solid #DCDBF0;
+
+			&.opened {
+				background-color: #F7F6FB;
+				.menu__link {
+					.sprite {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+    }
+	&__link {
+		display: block;
+		color: $light_blue;
+		font-size: 14px;
+		line-height: 1em;
+		cursor: pointer;
+		padding: 16px;
+		transition: all 0.2s ease;
+		.sprite {
+			display: none;
+		}
+		@include phone {
+			font-size: 16px;
+			padding: 18px 0;
+			color: $default_color;
+			&--triger {
+				padding: 0;
+			}
+
+			.sprite {
+				position: absolute;
+				right: 20px;
+				top: 14px;
+				display: block;
+				fill: $blue;
+			}
+		}
+	}
+	&__trigger {
+		@include phone {
+			padding: 18px 0;
+		}
+	}
+	&__login {
+		display: none;
+		@include phone {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+	}
+    &__box {
+        @include phone {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                .menu__list {
+                    left: 0;
+                }
+            }
+        }
+    }
+	.menu__overlay {
+		@include phone {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(35, 44, 89, .75);
+			z-index: 99;
+		}
+    }
+    &__hamburger {
+        display: none;
+        align-items: center;
+		@include phone {
+			display: flex;
+			width: 36px;
+			height: 36px;
+			justify-content: center;
+			align-items: center;
+		}
+    }
+    &__hamburger-ttl {
+        color: #ffffff;
+        letter-spacing: 0.3px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+.sub-menu {
+	&__list {
+		@media (min-width: 768px) {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 46px;
+			width: 288px;
+			background-color: #ffffff;
+			box-shadow: 0px 2px 2px rgba(35, 44, 89, 0.1),
+				0px 6px 6px rgba(50, 47, 72, 0.06);
+			border-radius: 0px 0px 4px 4px;
+			transition: all 0.8s ease;
+			&::after {
+				content: "";
+				position: absolute;
+				height: 10px;
+				left: 0;
+				right: 0;
+				top: -10px;
+			}
+		}
+		@include phone {
+			display: none;
+			position: relative;
+		}
+	}
+	&__item {
+		@media (min-width: 768px) {
+			& + & {
+				border-top: 1px solid #dcdbf0;
+			}
+			&:hover {
+				.sub-menu__link {
+					background-color: #f7f6fb;
+					color: $light_blue;
+				}
+			}
+		}
+		@include phone {
+			padding-left: 28px;
+			.sub-menu__link {
+				border-top: 1px solid #DCDBF0;
+			}
+
+		}
+	}
+
+	&__link {
+		display: block;
+		@media (min-width: 768px) {
+			color: #525366;
+			padding: 16px 12px;
+		}
+		@include phone {
+			font-size: 15px;
+			padding: 15px 0;
+			line-height: 1.4em;
+		}
+
+	}
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    .line {
+        width: 24px;
+        height: 3px;
+        background-color: $blue;
+        display: block;
+        margin: 4px auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    &.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.active .line:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    & .line:nth-child(1) {
+        margin-top: 0;
+    }
+
+    & .line:nth-child(3) {
+        margin-bottom: 0;
+    }
+}
+
+.search {
+    &_field {
+        margin-right: 32px;
+        @include tablet {
+            margin-right: 16px;
+        }
+        @include phone {
+            margin: 0 0 0 auto;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+    &__placeholder {
+        @include tablet {
+            display: none;
+        }
+    }
+    &__form {
+        display: none;
+    }
+    &__input-b {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 4;
+    }
+    &__input {
+        width: 100%;
+        border: none;
+        height: 40px;
+        padding: 0 46px;
+        font-size: 17px;
+        color: #525366;
+        line-height: 48px;
+        border-radius: 4px;
+    }
+    &__btn {
+        display: block;
+        position: absolute;
+        width: 46px;
+        height: 40px;
+        left: 0;
+        top: 0;
+        color: #96a4ef;
+        z-index: 1;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+
+        .icon {
+            line-height: 40px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 46px;
+        height: 40px;
+        color: #96a4ef;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 5;
+    }
+}
+.sprite-search {
+    fill: $blue;
+    margin-right: 4px;
+    @include tablet {
+        margin-right: 0;
+    }
+}
+
+.login__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #282f6c;
+    border-radius: 4px;
+    .sprite-case {
+        fill: $yellow;
+        margin-right: 8px;
+    }
+	&--header {
+		@include phone {
+			display: none;
+		}
+	}
+}

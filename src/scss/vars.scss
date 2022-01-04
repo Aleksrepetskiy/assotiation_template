@@ -1,0 +1,41 @@
+$OS: 'Open Sans', sans-serif;
+$MW: 'Merriweather', serif;
+
+//COLOR
+
+$default_color: #383B4B;
+$yellow: #FFCE3A;
+$blue: #4657AE;
+$dark_blue: #282F6C;
+$light_blue: #6E97FF;
+$white: #ffffff;
+$dark: #111111;
+
+
+// Breakpoints
+
+@mixin desktopHD {
+    @media (min-width: 1201px){
+        @content;
+  	}
+}
+@mixin desktop {
+    @media (max-width: 1199px){
+        @content;
+  	}
+}
+@mixin tablet {
+    @media (max-width: 991px){
+        @content;
+  	}
+}
+@mixin phone {
+    @media (max-width: 767px){
+        @content;
+  	}
+}
+@mixin phoneES {
+    @media (max-width: 479px){
+        @content;
+  	}
+}

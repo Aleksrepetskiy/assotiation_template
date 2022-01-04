@@ -1,0 +1,65 @@
+@import "normalize";
+@import "vars";
+* {
+	line-height: 1.4em;
+}
+html {
+	font-size: 16px;
+}
+.html-over {
+    overflow: hidden;
+}
+body {
+	font-family: $OS;
+	color: $default_color;
+	min-width: 320px;
+	background-color: #FBFBFB;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+.wrapper {
+	max-width: 1412px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+.bold {
+	font-weight: 600;
+}
+.bolder {
+	font-weight: 700;
+}
+h1, .h1 {
+	font-size: 40px;
+	line-height: 1.2em;
+	font-family: $MW
+}
+h2, .h2 {
+	font-size: 30px;
+	line-height: 1.2em;
+	font-family: $MW
+}
+h3, .h3 {
+	font-size: 24px;
+	line-height: 1.2em;
+	font-family: $MW
+}
+h4, .h4 {
+	font-size: 18px;
+	line-height: 1.2em;
+	font-family: $MW
+}
+.fs-18 {
+	font-size: 18px;
+}
+.fs-18 {
+	font-size: 14px;
+}
+.color-db {
+	color: $dark_blue
+}
+.sprite {
+	display: block
+}
+@import "block/header.scss";
+@import "block/footer.scss";
+@import "block/popup.scss"
