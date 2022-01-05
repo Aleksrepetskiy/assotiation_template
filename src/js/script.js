@@ -9,17 +9,21 @@ $(document).ready(function () {
 	})
 
     //Поиск
-    $('.search__link').on('click', function (e) {
-        e.preventDefault();
-        $(this).closest('.search').find('.search__form').show();
-    });
-    $('.search__close').on('click', function (e) {
-        e.preventDefault();
-        $(this).closest('.search__form').hide();
-    });
+	const seachModalBox = document.querySelector('.modal__search'),
+		seachBtn = document.querySelector('.search__link')
+	seachBtn.addEventListener('click', function(e){
+		e.preventDefault();
+		seachModalBox.classList.add('active');
+	})
+	seachModalBox.addEventListener('click', function(e){
+		if(e.target === seachModalBox) {
+			console.log(e.target);
+		}
+		seachModalBox.classList.remove('active');
+	})
+
 
     //Pop-up
-
     $('body').on('click', '.js-open', function (e) {
         e.preventDefault();
         var attr = $(this).data('attr');
@@ -31,9 +35,15 @@ $(document).ready(function () {
         e.preventDefault();
         $('.popup').removeClass('active');
     });
+    $('body').on('click', '.popup', function (e) {
+        e.preventDefault();
+		if(e.target === this) {
+			$('.popup').removeClass('active');
+		}
+    });
+
+
     //меню
-
-
     $('body').on('click', '.menu__trigger', function (e) {
         e.preventDefault();
         if ($(window).width() < 767) {
