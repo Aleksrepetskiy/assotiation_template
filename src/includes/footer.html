@@ -132,41 +132,24 @@
 		</div>
 	</div>
 </footer>
-<div class="popup popup__search">
-	<div class="popup__box">
-		<a href="#" class="close js-close"><span class="icon icon-close"></span></a>
-		<h2 class="h2">Увійти на сайт</h2>
-		<div class="popup__form">
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Email або телефон">
-			</div>
-			<div class="b-input">
-				<input class="input" type="password" required="true" placeholder="Пароль">
-			</div>
-			<a href="#" class="popup__link js-open" data-attr=".popup__pass">Нагадати пароль</a>
-			<div class="popup__btn-box2">
-				<button type="submit" class="button">увійти</button>
-				<a href="#" class="btn-transparent js-open" data-attr=".popup__registr">Реєстрація</a>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="popup popup__login">
 	<div class="popup__box">
 		<a href="#" class="close js-close"><span class="icon icon-close"></span></a>
 		<h2 class="h2">Увійти на сайт</h2>
 		<div class="popup__form">
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Email або телефон">
-			</div>
-			<div class="b-input">
-				<input class="input" type="password" required="true" placeholder="Пароль">
-			</div>
-			<a href="#" class="popup__link js-open" data-attr=".popup__pass">Нагадати пароль</a>
-			<div class="popup__btn-box2">
-				<button type="submit" class="button">увійти</button>
-				<a href="#" class="btn-transparent js-open" data-attr=".popup__registr">Реєстрація</a>
-			</div>
+			<form action="">
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="Email або телефон">
+				</div>
+				<div class="b-input">
+					<input class="input" type="password" required="true" placeholder="Пароль">
+				</div>
+				<a href="#" class="popup__link js-open" data-attr=".popup__pass">Нагадати пароль</a>
+				<div class="popup__btn-box2">
+					<button type="submit" class="button">увійти</button>
+					<a href="#" class="btn-transparent js-open" data-attr=".popup__registr">Реєстрація</a>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
@@ -176,13 +159,15 @@
 		<a href="#" class="close js-close"><span class="icon icon-close"></span></a>
 		<h2 class="h2">Нагадати пароль</h2>
 		<div class="popup__form">
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Email">
-			</div>
-			<div class="b-button">
-				<button type="submit" class="button">Відновити пароль</button>
-			</div>
-			<a href="#" class="popup__link">← Я згадав пароль</a>
+			<form action="">
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="Email">
+				</div>
+				<div class="b-button">
+					<button type="submit" class="button">Відновити пароль</button>
+				</div>
+				<a href="#" class="popup__link js-open" data-attr=".popup__login">← Я згадав пароль</a>
+			</form>
 		</div>
 	</div>
 </div>
@@ -192,22 +177,24 @@
 		<a href="#" class="close js-close"><span class="icon icon-close"></span></a>
 		<h2 class="h2">Реєстрація </h2>
 		<div class="popup__form">
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="ПІБ">
-			</div>
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Телефон">
-			</div>
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Email">
-			</div>
-			<div class="b-input">
-				<input class="input" type="text" required="true" placeholder="Організація">
-			</div>
-			<div class="b-button">
-				<button type="submit" class="button">Зареєструватися</button>
-			</div>
-			<a href="#" class="popup__link">← Я вже маю акаунт</a>
+			<form action="">
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="ПІБ">
+				</div>
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="Телефон">
+				</div>
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="Email">
+				</div>
+				<div class="b-input">
+					<input class="input" type="text" required="true" placeholder="Організація">
+				</div>
+				<div class="b-button">
+					<button type="submit" class="button">Зареєструватися</button>
+				</div>
+				<a href="#" class="popup__link js-open" data-attr=".popup__login">← Я вже маю акаунт</a>
+			</form>
 		</div>
 	</div>
 </div>
@@ -220,7 +207,7 @@
 	</div>
 </div>
 
-<div class="modal modal__search">
+<div class="modal modal__search" data-modal="modal__search">
 	<div class="modal__box">
 		<div class="wrapper">
 			<h2 class="h2">Пошук</h2>
