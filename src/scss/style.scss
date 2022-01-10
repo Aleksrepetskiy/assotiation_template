@@ -13,7 +13,6 @@ body {
 	font-family: $OS;
 	color: $default_color;
 	min-width: 320px;
-	background-color: #FBFBFB;
 	display: flex;
 	flex-direction: column;
 }
@@ -48,11 +47,29 @@ h4, .h4 {
 	line-height: 1.2em;
 	font-family: $MW
 }
+p {
+	margin-bottom: 12px;
+}
+.text-center {
+	text-align: center;
+}
 .fs-18 {
 	font-size: 18px;
 }
 .fs-18 {
 	font-size: 14px;
+}
+.mb-0 {
+	margin-bottom: 0;
+}
+.mb-24 {
+	margin-bottom: 24px;
+}
+.mb-32 {
+	margin-bottom: 32px;
+}
+.mb-40 {
+	margin-bottom: 40px;
 }
 .color-db {
 	color: $dark_blue
@@ -84,8 +101,20 @@ h4, .h4 {
 		margin-left: 8px;
 	}
 }
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.fade {
+	animation-name: fadein;
+	animation-duration: 1.5s;
+}
 @import "block/forms.scss";
 @import "block/header.scss";
 @import "block/search.scss";
 @import "block/footer.scss";
 @import "block/popup.scss";
+@import "block/swiper.scss";
+@import "block/index.scss";

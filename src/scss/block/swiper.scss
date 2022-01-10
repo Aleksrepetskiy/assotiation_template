@@ -1,0 +1,70 @@
+
+
+.main-swiper{
+	width: 100%;
+	height: 308px;
+	@include phone {
+		height: 100%;
+		background-color: $dark_blue;
+	}
+	margin-top: 16px;
+	&__text {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 522px;
+		background-color: $dark_blue;
+		color: #fff;
+		padding: 60px 24px 60px 70px;
+		font-size: 20px;
+		line-height: 140%;
+		display: flex;
+		align-items: center;
+		@include tablet {
+			width: 50%;
+			padding: 24px 24px 40px 24px;
+			font-size: 16px;
+		}
+		@include phone {
+			padding: 24px 24px 40px 24px;
+			font-size: 16px;
+			position: relative;
+			width: 100%;
+		}
+	}
+	&__box-img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		@include phone {
+			height: 0;
+    		padding-bottom: 39%;
+		}
+
+	}
+	.swiper-slide {
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	}
+	.swiper-pagination {
+		text-align: right;
+		padding: 0 12px;
+	}
+	.swiper-pagination-bullet {
+		width: 16px;
+		height: 8px;
+		border-radius: 2px;
+		background: #8289C6;
+	}
+	.swiper-pagination-bullet-active {
+		background: $yellow;
+	}
+}
