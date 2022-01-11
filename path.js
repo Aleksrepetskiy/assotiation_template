@@ -19,7 +19,7 @@ module.exports = {
 		dist: pathDist + "/css/"
 	},
 	js: {
-		src: pathSrc + "/js/script.js",
+		src: [pathSrc + "/js/script.js", pathSrc + "/js/index.js"],
 		watch: pathSrc + "/js/**/*.js",
 		dist: pathDist + "/js/"
 	},

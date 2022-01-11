@@ -40,7 +40,7 @@
 	width: 100%;
 }
 .input {
-	height: 62px;
+	height: 44px;
 	width: 100%;
 	border-radius: 4px;
 	padding: 0 9px;
@@ -90,7 +90,6 @@
 	}
 
 }
-
 .btn-transparent {
     display: inline-block;
     background-color: transparent;
@@ -101,4 +100,41 @@
     color: #626cc3;
     font-weight: 700;
     font-size: 14px;
+}
+.btn-link {
+	font-weight: bold;
+	font-size: 14px;
+	color: $blue;
+	text-transform: uppercase;
+} 
+.btn-border {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	color: $blue;
+	text-transform: uppercase;
+	padding: 15px 32px;
+	border: 1px solid #4657AE;
+	border-radius: 4px;
+}
+
+.btn {
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.4em;
+    height: 48px;
+    padding: 0 8px;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.btn-yellow {
+    background: #FFCE3A;
+    color: $dark_blue;
 }

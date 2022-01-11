@@ -15,6 +15,7 @@
 	}
 	&__tab {
 		width: 33.33%;
+		min-width: fit-content;
 		flex-shrink: 0;
 		text-align: center;
 		border-bottom: 3px solid #E8E5F4;
@@ -30,11 +31,20 @@
 }
 .aside {
 	width: 334px;
-	background-color: red;
 	flex-shrink: 0;
 	margin-left: 16px;
 	@include tablet {
 		display: none;
+	}
+}
+.box-grey-small {
+	&__suscribe {
+		padding: 30px 40px;
+	}
+	&__item {
+		padding: 26px;
+		display: flex;
+		align-items: center;
 	}
 }
 .read-more {
