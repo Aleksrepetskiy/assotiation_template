@@ -144,4 +144,16 @@ window.addEventListener("DOMContentLoaded", () => {
             delay
         );
     });
+
+	//READ-MORE
+	const readMoreContent = document.querySelector('.read-more__content'),
+	readMoreBtn = document.querySelector('.read-more__btn'),
+	readMoreBtnBox = document.querySelector('.read-more__btn-box');
+	if(readMoreBtn) {
+		readMoreBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			readMoreBtnBox.remove();
+			readMoreContent.classList.remove('read-more__hide');
+		})
+	}
 });
