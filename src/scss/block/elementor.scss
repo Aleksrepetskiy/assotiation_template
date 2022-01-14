@@ -1,0 +1,87 @@
+div[data-elementor-type="wp-post"] .elementor-section.elementor-section-boxed > .elementor-container {
+	max-width: 1412px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+div[data-elementor-type="wp-post"] h1 {
+	color: #282F6C
+}
+div[data-elementor-type="wp-post"] ul, div[data-elementor-type="wp-post"] ol {
+	margin-bottom: 12px;
+}
+div[data-elementor-type="wp-post"] ol {
+	counter-reset: my-awesome-counter;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+div[data-elementor-type="wp-post"] ol li {
+	counter-increment: my-awesome-counter;
+}
+div[data-elementor-type="wp-post"] ol li:before {
+	content: counter(my-awesome-counter);
+	  background: #8289C6;
+		border-radius: 4px;
+	  position: absolute;
+	  left: 0;
+	  top: -8px;
+		  display: block;
+	line-height: 32px;
+	  width: 32px;
+	  height: 32px;
+	  text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+	color: #ffffff;
+}
+div[data-elementor-type="wp-post"] li {
+	position:relative;
+	padding-left: 48px;
+}
+div[data-elementor-type="wp-post"] ol li+li {
+	margin-top: 22px;
+}
+div[data-elementor-type="wp-post"] ul li+li {
+	margin-top: 8px;
+}
+div[data-elementor-type="wp-post"] ul li:before {
+	content: '';
+	position: absolute;
+	background: #8289C6;
+	border-radius: 50% 50%;
+	width: 6px;
+	height: 6px;
+	left: 12px;
+	top: 5px;
+
+}
+
+div[data-elementor-type="wp-post"] .elementor-blockquote--skin-border .elementor-blockquote {
+    background: linear-gradient(180deg, #F4F3FF 0%, #F0EFFF 100%);
+	border-radius: 8px;
+	border: none;
+	padding: 32px;
+	margin-bottom: 12px;
+}
+div[data-elementor-type="wp-post"] .elementor-blockquote footer  {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+}
+div[data-elementor-type="wp-post"] .elementor-blockquote__author {
+	font-weight: normal;
+}
+div[data-elementor-type="wp-post"] .elementor-blockquote__content {
+	padding-left: 36px;
+	position: relative;
+}
+div[data-elementor-type="wp-post"] .elementor-blockquote__content:before {
+	content: '\201c';
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    width: 36px;
+    height: 36px;
+    font-size: 100px;
+    line-height: 1em;
+    color: #8289C6;
+}
