@@ -211,6 +211,7 @@
 				0px 6px 6px rgba(50, 47, 72, 0.06);
 			border-radius: 0px 0px 4px 4px;
 			transition: all 0.8s ease;
+			z-index: 1;
 			&::after {
 				content: "";
 				position: absolute;
