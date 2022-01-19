@@ -75,6 +75,7 @@
     }
     &__link {
         display: block;
+		font-size: 14px;
     }
     &__contact {
         display: flex;
@@ -138,9 +139,7 @@
 		position: relative;
 		padding-left: 32px;
 		grid-area: adress;
-		@include phone{
-			font-size: 14px;
-		}
+		font-size: 14px;
 		.sprite {
 			position: absolute;
 			left: 0px;

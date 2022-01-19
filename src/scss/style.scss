@@ -31,24 +31,29 @@ h1, .h1 {
 	font-size: 36px;
 	line-height: 1.2em;
 	font-family: $MW;
-	margin-bottom: 36px;
+	margin-bottom: 24px;
 	color: $dark_blue;
-	@include phone {
-		font-size: 32px;
+	@include tablet {
+		font-size: 30px;
 	}
 }
 h2, .h2 {
 	font-size: 30px;
 	line-height: 1.2em;
 	font-family: $MW;
-	@include phone {
-		font-size: 28px;
+	margin-bottom: 16px;
+	@include tablet {
+		font-size: 26px;
 	}
 }
 h3, .h3 {
 	font-size: 24px;
 	line-height: 1.2em;
 	font-family: $MW;
+	margin-bottom: 10px;
+	@include tablet {
+		font-size: 20px;
+	}
 }
 h4, .h4 {
 	font-size: 18px;
@@ -56,7 +61,8 @@ h4, .h4 {
 	font-family: $MW;
 }
 p {
-	margin-bottom: 12px;
+	margin-bottom: 24px;
+	
 }
 .bold {
 	font-weight: bold;
@@ -84,6 +90,9 @@ p {
 }
 .mb-16 {
 	margin-bottom: 16px;
+}
+.mr-16 {
+	margin-right: 16px;
 }
 .mb-24 {
 	margin-bottom: 24px;
@@ -176,4 +185,6 @@ p {
 @import "block/table.scss";
 @import "block/elementor.scss";
 @import "block/breadcrumbs.scss";
-@import "block/article_news.scss";
+@import "block/article.scss";
+@import "block/shild.scss";
+@import "block/share.scss";

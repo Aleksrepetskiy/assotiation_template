@@ -75,7 +75,7 @@
 }
 .button {
 	height: 48px;
-	background: linear-gradient(180deg, #626CC3 0%, #4956A3 100%);
+	background: #282f6c;
 	border-radius: 4px;
 	color: white;
 	font-size: 14px;
@@ -86,7 +86,7 @@
 	cursor: pointer;
 	letter-spacing: 0.8px;
 	&:hover {
-		background: linear-gradient(180deg,  #4956A3 0%, #626CC3 100%);
+		opacity: 0.9;
 	}
 
 }

@@ -17,7 +17,7 @@
 		background-color: $dark_blue;
 		color: #fff;
 		padding: 60px 24px 60px 70px;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 140%;
 		display: flex;
 		align-items: center;
@@ -66,5 +66,20 @@
 	}
 	.swiper-pagination-bullet-active {
 		background: $yellow;
+	}
+}
+
+.swiper-slide-bg {
+	background-position-x: left !important;
+	background-size: 63% !important;
+	@media (min-width: 768px) {
+		background-position-x: left !important;
+		background-size: 63% !important;
+	}
+}
+.swiper-slide-bg {
+	@include phone { 
+		background-position-y: top !important;
+		background-size: 100% !important;
 	}
 }

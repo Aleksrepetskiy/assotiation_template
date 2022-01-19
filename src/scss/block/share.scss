@@ -1,0 +1,29 @@
+.share {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
+    color: #525366;
+    padding: 16px 0;
+    border-top: 1px solid #DCDBF0;
+    margin-top: 40px;
+	&__ttl {
+		margin-right: 10px;
+		@include phoneES {
+			display: none;
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		margin-right: 12px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.sprite {
+		fill: #B3B8D5;
+	}
+}
