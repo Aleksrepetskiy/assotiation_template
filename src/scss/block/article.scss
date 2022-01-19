@@ -1,22 +1,12 @@
 .article {
+	padding: 24px 32px 0;
 	max-width: 1030px;
 	margin: 0 auto;
 	background-color: #fff;
-	padding: 24px 32px 0;
 	border: 1px solid #DCDBF0;
 	border-radius: 4px;
 	@include phone {
 		padding: 24px 16px 0;
-	}
-	&__box {
-		padding: 24px 16px 60px;
-		margin-bottom: 80px;
-		@include tablet {
-			margin: 0 -16px;
-		}
-	}
-	p {
-		line-height: 1.6em;
 	}
 	&__header {
 		display: flex;
@@ -59,13 +49,101 @@
 		width: 100%;
 		align-items: center;
 	}
+
+}
+
+.article-page {
+	padding: 24px 32px 70px;
+	@include phone {
+		padding: 24px 16px 40px;
+	}
+	.box-white {
+		padding: 24px 32px 0;
+		max-width: 1030px;
+		margin: 0 auto;
+		@include phone {
+			padding: 24px 16px 0;
+		}
+		&>ul, ol {
+			margin-bottom: 40px;
+			li {
+				position: relative;
+				padding-left: 71px;
+				line-height: 1.6em;
+				margin-bottom: 14px;
+				@include phone {
+					padding-left: 40px;
+				}
+			}
+			li:last-child {
+				margin-bottom: 0;
+			}
+		}
+		>ul {
+			li:before {
+				content: "";
+				position: absolute;
+				background: #8289C6;
+				border-radius: 50% 50%;
+				width: 6px;
+				height: 6px;
+				left: 38px;
+				top: 8px;
+				@include phone {
+					left: 10px;
+				}
+			}
+		}
+
+		&>ol {
+			counter-reset: my-awesome-counter;
+			li {
+				counter-increment: my-awesome-counter;
+			}
+			li:before {
+				content: counter(my-awesome-counter);
+				background: #8289C6;
+				border-radius: 4px;
+				position: absolute;
+				left: 22px;
+				top: -4px;
+				display: block;
+				line-height: 32px;
+				width: 32px;
+				height: 32px;
+				text-align: center;
+				font-weight: bold;
+				font-size: 12px;
+				color: #ffffff;
+				@include phone {
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+.article, .article-page {
+	&__box {
+		padding: 24px 16px 60px;
+		margin-bottom: 80px;
+		@include tablet {
+			margin: 0 -16px;
+		}
+	}
+	p {
+		line-height: 1.6em;
+	}
+
 	&__date {
 		font-size: 14px;
 		color: #6E728E;
 	}
-	&>ul, ol {
+	&>ul,.ul, ol,.ol {
 		margin-bottom: 40px;
-		li {
+		li,.li {
 			position: relative;
 			padding-left: 71px;
 			line-height: 1.6em;
@@ -74,12 +152,12 @@
 				padding-left: 40px;
 			}
 		}
-		li:last-child {
+		li:last-child,.li:last-child {
 			margin-bottom: 0;
 		}
 	}
-	>ul {
-		li:before {
+	>ul,.ul {
+		li:before,.li:before  {
 			content: "";
 			position: absolute;
 			background: #8289C6;
@@ -94,12 +172,12 @@
 		}
 	}
 
-	&>ol {
+	&>ol,.ol {
 		counter-reset: my-awesome-counter;
-		li {
+		li,.li {
 			counter-increment: my-awesome-counter;
 		}
-		li:before {
+		li:before,.li:before {
 			content: counter(my-awesome-counter);
 			background: #8289C6;
 			border-radius: 4px;

@@ -62,7 +62,7 @@ h4, .h4 {
 }
 p {
 	margin-bottom: 24px;
-	
+
 }
 .bold {
 	font-weight: bold;
@@ -172,6 +172,11 @@ p {
 }
 .box-grey-small {
 	background: #F7F6FB;
+}
+.box-white {
+	background-color: #fff;
+	border: 1px solid #DCDBF0;
+	border-radius: 4px;
 }
 
 @import "block/forms.scss";
