@@ -1,0 +1,65 @@
+.box-grey--members {
+	padding: 20px 20px 64px;
+}
+.members {
+	&__inner {
+		max-width: 1300px;
+		margin:  0 auto;
+	}
+	&__form {
+		display: flex;
+		@include phoneES {
+			flex-wrap: wrap;
+		}
+		.b-input, .b-select {
+			max-width: 300px;
+			@include phoneES  {
+				max-width: 100%;
+			}
+		}
+		.b-input {
+			margin-right: 12px;
+			position: relative;
+			@include phoneES  {
+				margin: 0 0 12px 0;
+			}
+		}
+	}
+	&__input-search {
+		padding-right: 44px;
+	}
+	&__search {
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: transparent;
+		cursor: pointer;
+	}
+	&__logo {
+		max-width: 30px;
+		margin-right: 12px;
+	}
+	&__table {
+		@include phone {
+			overflow-x: auto;
+		}
+
+	}
+	.tr .td, .tr .th  {
+		text-align: left;
+	}
+	.tr .td:first-child, .tr .th:first-child  {
+		text-align: center;
+	}
+	.th {
+		border-color:#8289C6;
+	}
+	.table {
+		margin: 0;
+	}
+}

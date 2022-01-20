@@ -118,6 +118,9 @@ p {
 .color-black {
 	color: #000;
 }
+.color-blue {
+	color: #6E97FF;
+}
 .sprite {
 	display: block
 }
@@ -178,6 +181,12 @@ p {
 	border: 1px solid #DCDBF0;
 	border-radius: 4px;
 }
+.flex {
+	display: flex;
+}
+.flex-aic {
+	align-items: center
+}
 
 @import "block/forms.scss";
 @import "block/header.scss";
@@ -193,3 +202,4 @@ p {
 @import "block/article.scss";
 @import "block/shild.scss";
 @import "block/share.scss";
+@import "block/members.scss";
