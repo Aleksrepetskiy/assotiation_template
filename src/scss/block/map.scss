@@ -1,0 +1,18 @@
+.contact {
+	&__inner {
+		background-color: #fff;
+		max-width: 1030px;
+		margin: 0 auto;
+		padding: 24px;
+	}
+	&__adress {
+		display: flex;
+		align-items: center;
+		.sprite {
+			margin-right: 8px;
+		}
+	}
+	.footer__contact {
+		margin-bottom: 40px;
+	}
+}

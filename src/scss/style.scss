@@ -187,6 +187,11 @@ p {
 .flex-aic {
 	align-items: center
 }
+.max-1030 {
+	max-width: 1030px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
 
 @import "block/forms.scss";
 @import "block/header.scss";
@@ -203,3 +208,5 @@ p {
 @import "block/shild.scss";
 @import "block/share.scss";
 @import "block/members.scss";
+@import "block/no_search.scss";
+@import "block/map.scss";

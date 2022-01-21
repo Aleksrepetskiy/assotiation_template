@@ -1,0 +1,107 @@
+.no-search {
+	margin-bottom: 80px;
+
+	&__ttl {
+	  span {
+		color: $light_blue;
+		font-style: italic;
+		font-weight: bold;
+	  }
+	}
+	&__desc {
+	  font-size: 16px;
+	  line-height: 1.8em;
+	}
+	&__list {
+	  margin-top: 56px;
+
+	  @include phone {
+		flex-direction: column;
+		margin-top: 12px;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+	}
+	&__item {
+	  & + .no-search__item {
+		margin-left: 10px;
+
+		@include phone {
+		  margin-left: 0;
+		}
+	  }
+	}
+	&__item-num {
+	  font-family: $MW;
+	  color: $light_blue;
+	  font-size: 30px;
+	  line-height: 1.2em;
+	  font-style: italic;
+	  font-weight: bold;
+	}
+	&__item-text {
+	  font-size: 16px;
+	  line-height: 1.8em;
+	  margin-top: 6px;
+	}
+	.box-grey__wrapper {
+	  padding-top: 52px;
+
+	  @include phone {
+		padding-top: 22px;
+	  }
+	}
+	&__form {
+	  margin-top: 40px;
+
+	  .search__input-b {
+		.sprite {
+		  position: absolute;
+		  left: 0;
+		  height: 100%;
+		  margin-left: 12px;
+		}
+	  }
+	  .search__input {
+		padding-left: 62px;
+	  }
+	  .search__btn {
+		padding: 0 48px;
+
+		@include phone {
+		  .search__btn-text {
+			display: block;
+		  }
+		}
+
+	  }
+	  .search__btn-text {
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+	  }
+	}
+	&__phone {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  margin: 60px 0;
+	}
+	&__phone-ttl {
+	  font-weight: bold;
+	}
+	&__phone-dsc {
+	  font-size: 18px;
+	  line-height: 1.8em;
+	}
+	&__phone-number {
+	  font-weight: bold;
+	  margin-left: 22px;
+
+	  .sprite {
+		fill: #383B4B;
+		margin-right: 8px;
+	  }
+	}
+
+  }

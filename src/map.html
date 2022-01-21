@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ua-Ua">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ассоциация</title>
+	<!--FONTS-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+		rel="stylesheet" />
+	<!--CSS-->
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="/css/style.min.css" />
+</head>
+
+<body>
+	<!--[if lt IE8]>
+		<p class="browsehappy">Ваш браузер <strong>устарел</strong>.Пожалуйста < href="http://browsehappy.com/"обновите</a> его.</p>
+	<![endif]-->
+	@@include('includes/header.html')
+	<main class="main">
+		<div class="wrapper">
+			@@include('includes/breadcrumbs.html')
+			<h1 class="h1 text-center">Контакти</h1>
+			<section class="contact box-grey mb-80">
+				<div class="max-1030">
+					<div class="footer__contact">
+						<div class="footer__contact-item">
+							<svg class="sprite" width="24" height="24">
+								<use xlink:href="/img/sprite/sprite.svg#phone"></use>
+							</svg>
+							<span class="footer__number">(044) 285-27-55</span>
+						</div>
+						<div class="footer__contact-divider">|</div>
+						<div class="footer__contact-item">
+							<img src="/img/icon/viber.svg" alt="">
+							<svg class="sprite sprite-kievstar" width="24" height="24">
+								<use xlink:href="/img/sprite/sprite.svg#kievstar"></use>
+							</svg>
+							<span class="footer__number">(098) 479-55-18</span>
+						</div>
+						<div class="footer__contact-divider">|</div>
+						<div class="footer__contact-item">
+							<svg class="sprite sprite-vodafone" width="24" height="24">
+								<use xlink:href="/img/sprite/sprite.svg#vodafone"></use>
+							</svg>
+							<span class="footer__number">(099) 475-33-85</span>
+						</div>
+						<div class="footer__contact-divider">|</div>
+						<div class="footer__contact-item">
+							Факс:
+							<span class="footer__number">(044) 383-76-91</span>
+						</div>
+					</div>
+				</div>
+				<div class="contact__inner">
+					<div class="contact__adress mb-24">
+						<svg class="sprite sprite-map" width="24" height="24">
+							<use xlink:href="/img/sprite/sprite.svg#map"></use>
+						</svg>
+						Україна, 01133, м. Київ, вул. Щорса, 32-Б, офіс 61</div>
+					<div class="map" id="map">
+						<img src="/img/map.jpeg" alt="">
+					</div>
+				</div>
+			</section>
+			@@include('includes/footer.html')
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="/js/script.js"></script>
+</body>
+
+</html>

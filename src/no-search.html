@@ -26,6 +26,53 @@
 	<main class="main">
 		<div class="wrapper">
 			@@include('includes/breadcrumbs.html')
+			<div class="no-search box-grey">
+				<div class="box-grey__wrapper">
+					<h2 class="no-search__ttl text-center">По запиту <span>«vbcx»</span> нічого не знайдено</h2>
+					<div class="no-search__desc text-center">Будь ласка, спробуйте ще раз із іншими ключовими словами.</div>
+					<ul class="no-search__list flex">
+						<li class="no-search__item">
+							<div class="no-search__item-num">1.</div>
+							<div class="no-search__item-text">Будь ласка, перевірте <strong>правильність</strong> написання запиту</div>
+						</li>
+						<li class="no-search__item">
+							<div class="no-search__item-num">2.</div>
+							<div class="no-search__item-text">Намагайтеся використовувати лише <strong>ключові слова</strong>.</div>
+						</li>
+						<li class="no-search__item">
+							<div class="no-search__item-num">3.</div>
+							<div class="no-search__item-text">Спробуйте <strong>уточнити</strong> пошуковий запит.</div>
+						</li>
+					</ul>
+					<div class="no-search__form search_field">
+						<div class="search__form">
+							<form action="">
+								<div class="search__input-b">
+									<svg class="sprite sprite-search" width="36" height="36">
+										<use xlink:href="/img/sprite/sprite.svg#search"></use>
+									</svg>
+									<input type="text" class="search__input" placeholder="Пошук">
+								</div>
+								<button class="search__btn" type="submit">
+									<span class="search__btn-text">Знайти</span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="no-search__phone">
+						<h3 class="no-search__phone-ttl text-center">Не знайшли те, що шукали?</h3>
+						<div class="no-search__phone-dsc flex">дзвоніть:
+							<span class="no-search__phone-number flex flex-aic">
+								<svg class="sprite sprite-search" width="24" height="24">
+									<use xlink:href="/img/sprite/sprite.svg#phone"></use>
+								</svg>
+								044 285 27 55
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
 	</main>
 	@@include('includes/footer.html')
