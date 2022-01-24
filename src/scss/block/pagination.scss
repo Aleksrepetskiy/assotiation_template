@@ -1,0 +1,29 @@
+.assotiation-pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 48px;
+	.page-numbers {
+		width: 48px;
+		height: 48px;
+		border: 1px solid #4657AE;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 8px;
+		font-weight: bold;
+		font-size: 14px;
+		color: #4657AE;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.current {
+			background-color: #4657AE;
+			color: #fff;
+		}
+	}
+	.sprite {
+		fill: #4657AE;
+	}
+
+}
