@@ -40,6 +40,35 @@
 		display: none;
 	}
 }
+.box-yellow {
+	background: $yellow2;
+	flex-direction: column;
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+
+		.sprite {
+			fill: #FFCE3A;
+		}
+	}
+	&__count {
+		font-family: $MW;
+		font-weight: 300;
+		font-size: 72px;
+		line-height: 91px;
+		color: $default_color;
+		letter-spacing: -2px;
+		margin: 0 12px;
+	}
+	a {
+		font-size: 14px;
+		line-height: 1.6em;
+		display: inline-block;
+		margin-top: 10px;
+	}
+}
 .box-grey-small {
 	&__suscribe {
 		padding: 30px 40px;
