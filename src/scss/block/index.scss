@@ -23,6 +23,9 @@
 		color: $blue;
 		padding: 17px 34px;
 		cursor: pointer;
+		@include phone {
+			padding: 16px 10px;
+		}
 		&.active {
 			border-color: $light_blue;
 			color: $light_blue;
