@@ -35,6 +35,76 @@
 		display: block;
 		object-fit: cover;
 	}
+	&__participants-only {
+		background: $light_blue2;
+		border-radius: 4px;
+		padding: 32px 20px 60px;
+		margin-bottom: 60px;
+
+		@include phone {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+
+		&__wrap {
+			max-width: 704px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+
+			.footer__contact {
+				justify-content: flex-start;
+				margin-top: 18px;
+
+				@include phone {
+					flex-direction: column;
+				}
+			}
+			.footer__contact-item {
+				& + .footer__contact-item {
+					margin-left: 3vw;
+
+					@include phone {
+						margin-left: 0;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+
+		&__ttl {
+			background: $white;
+			border-radius: 24px;
+			display: inline-flex;
+			align-items: center;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 1.2em;
+			color: $black;
+			margin: 0 auto;
+			padding: 14px 24px 14px 22px;
+
+			.sprite {
+				margin-right: 10px;
+
+				@include phone {
+					display: none;
+				}
+			}
+		}
+		&__desc {
+			margin-top: 18px;
+
+			p {
+				margin: 0;
+				font-size: 14px;
+
+				& + p {
+					margin-top: 2px;
+				}
+			}
+		}
+	}
 	&__h1 {
 		width: calc(100% - 324px);
 		overflow-wrap: break-word;
@@ -118,8 +188,6 @@
 		}
 	}
 }
-
-
 
 .article, .article-page {
 	&__box {
@@ -282,3 +350,4 @@
 		}
 	}
 }
+
