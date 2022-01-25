@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     $("body").on("click", ".popup", function (e) {
         e.preventDefault();
-        if (e.target === this) {
+		if (e.target.classList.contains("popup")) {
             closeModal();
         }
     });

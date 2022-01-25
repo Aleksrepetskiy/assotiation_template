@@ -1,6 +1,7 @@
 .shild {
     display: inline-block;
-    background-color: $yellow;
+    background-color: transparent;
+	border: 1px solid $yellow;
     border-radius: 4px;
     font-size: 14px;
     color: $dark_blue;

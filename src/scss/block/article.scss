@@ -282,3 +282,23 @@
 		}
 	}
 }
+
+.next-article {
+	.news__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 18px;
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+	}
+	.news__item {
+		background: #F7F6FB;
+		margin: 0;
+		padding: 42px 46px;
+		align-items: flex-start;
+		@include phone {
+			padding: 20px;
+		}
+	}
+}
