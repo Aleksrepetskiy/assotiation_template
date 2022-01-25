@@ -55,27 +55,6 @@
 	&__form {
 	  margin-top: 40px;
 
-	  .search__input-b {
-		.sprite {
-		  position: absolute;
-		  left: 0;
-		  height: 100%;
-		  margin-left: 12px;
-		}
-	  }
-	  .search__input {
-		padding-left: 62px;
-	  }
-	  .search__btn {
-		padding: 0 48px;
-
-		@include phone {
-		  .search__btn-text {
-			display: block;
-		  }
-		}
-
-	  }
 	  .search__btn-text {
 		letter-spacing: 0.5px;
 		text-transform: uppercase;

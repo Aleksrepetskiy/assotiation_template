@@ -2,3 +2,7 @@ node_modules
 dist
 package-lock.json
 .DS_Store
+/.idea/.gitignore
+/.idea/assotiation_template.iml
+/.idea/modules.xml
+/.idea/vcs.xml
