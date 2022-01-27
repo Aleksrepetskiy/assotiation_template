@@ -245,5 +245,33 @@ window.addEventListener("DOMContentLoaded", () => {
                 },
             },
         });
+        const materialsSwiper = new Swiper(".materials-swiper", {
+			slidesPerView: 3,
+			spaceBetween: 20,
+            loop: false,
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+			pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is <= 499px
+				320: {
+                    slidesPerView: 1,
+                },
+                499: {
+                    slidesPerView: 2,
+                },
+				991: {
+                    slidesPerView: 3,
+                },
+            },
+        });
     } catch (error) {}
 });

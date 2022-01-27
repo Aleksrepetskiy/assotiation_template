@@ -2,6 +2,7 @@
 	margin-bottom: 80px;
 
 	&__ttl {
+		margin-bottom: 40px;
 	  span {
 		color: $light_blue;
 		font-style: italic;
@@ -84,3 +85,16 @@
 	}
 
   }
+.s-search {
+	.news__item {
+		padding: 0;
+		margin-bottom: 40px;
+	}
+	.news__item:last-child {
+		margin-bottom: 0;
+	}
+	.search__list {
+		max-width: 1030px;
+		margin: 0 auto;
+	}
+}

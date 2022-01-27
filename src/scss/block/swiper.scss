@@ -16,10 +16,11 @@
 		width: 522px;
 		background-color: $dark_blue;
 		color: #fff;
-		padding: 60px 24px 60px 70px;
+		padding: 60px 60px 60px 70px;
 		font-size: 18px;
 		line-height: 140%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		@include tablet {
 			width: 50%;
@@ -78,7 +79,7 @@
 	}
 }
 .swiper-slide-bg {
-	@include phone { 
+	@include phone {
 		background-position-y: top !important;
 		background-size: 100% !important;
 	}
