@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function closeModal() {
         $(".popup").removeClass("active");
         seachModalBox.classList.remove("active");
+        $("body").off('click');
     }
 
     document.addEventListener("keydown", (e) => {
@@ -31,28 +32,21 @@ window.addEventListener("DOMContentLoaded", () => {
             closeModal();
         }
     });
-
     //Pop-up
-    $("body").on("click", ".js-open", function (e) {
+    $(".js-open").on("click", function (e) {
         e.preventDefault();
         var attr = $(this).data("attr");
         closeModal();
         $(attr).addClass("active");
     });
 
-    $("body").on("click", ".js-close", function (e) {
+    $(".js-close").on("click", function (e) {
         e.preventDefault();
         closeModal();
     });
-    $("body").on("click", ".popup", function (e) {
-        e.preventDefault();
-		if (e.target.classList.contains("popup")) {
-            closeModal();
-        }
-    });
 
     //меню
-    $("body").on("click", ".menu__trigger", function (e) {
+    $(".menu__trigger").on("click", function (e) {
         e.preventDefault();
         if ($(window).width() < 767) {
             var $this = $(this),
@@ -92,6 +86,14 @@ window.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         $(this).closest(".menu__box").removeClass("active");
         $("html").removeClass("html-over");
+    });
+
+	$(".popup").on("click", function (e) {
+        $("body").on( "click", function() {
+            if (e.target.classList.contains("popup")) {
+                closeModal();
+            }
+        });
     });
 
     //о нас открытие на моб версии
@@ -245,10 +247,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 },
             },
         });
+
         const materialsSwiper = new Swiper(".materials-swiper", {
-			slidesPerView: 3,
-			spaceBetween: 20,
-            loop: false,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
             keyboard: {
                 enabled: true,
             },
@@ -256,19 +259,19 @@ window.addEventListener("DOMContentLoaded", () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-			pagination: {
+            pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
             breakpoints: {
                 // when window width is <= 499px
-				320: {
+                320: {
                     slidesPerView: 1,
                 },
                 499: {
                     slidesPerView: 2,
                 },
-				991: {
+                991: {
                     slidesPerView: 3,
                 },
             },

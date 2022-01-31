@@ -12,6 +12,11 @@
 				font-weight: 600;
 			}
 		}
+		&.lock {
+			.shild::before {
+				display: block;
+			}
+		}
 	}
 	&__visual {
 		display: flex;
@@ -61,17 +66,10 @@
 		display: flex;
 		align-items: flex-end;
 	}
-	&__link {
-	}
 }
-.shild {
-	display: inline-flex;
-	font-size: 14px;
-	line-height: 16px;
-	color: $dark_blue;
-	border: 1px solid #FFCE3A;
-	border-radius: 4px;
-	padding: 3px 7px;
+.box-grey-news {
+	padding:  0 0 56px 0;
+
 }
 
 // .box-grey {
